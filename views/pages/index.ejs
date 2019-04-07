@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Task Creator</title>
+	<link rel="stylesheet" href="css/table.css">
+	<link rel="stylesheet" href="css/checkbox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/authForm.css">
+	<!-- Нормализация стилей -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="funcApp.js" defer></script>
+</head>
+<body>
+	<section class="start">
+		<div class="hero">
+		
+			<svg viewBox="0 0 1418 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<title>@WebDesignerMag</title>
+				<g stroke="none" fill="none" fill-rule="evenodd" fill-opacity="0">
+					<text id="@WebDesignerMag" stroke="#000" fill="#645F5A" font-weight="normal" font-family="PermanentMarker-Regular, Permanent Marker" font-size="144">
+						<tspan x="3" y="109"><!--
+							--><tspan>T</tspan><!--
+							--><tspan>a</tspan><!--
+							--><tspan>s</tspan><!--
+							--><tspan>k</tspan><!--
+							--><tspan> </tspan><!--
+							--><tspan>M</tspan><!--
+							--><tspan>a</tspan><!--
+							--><tspan>n</tspan><!--
+							--><tspan>a</tspan><!--
+							--><tspan>g</tspan><!--
+							--><tspan>e</tspan><!--
+							--><tspan>r</tspan><!--
+						--></tspan>
+					</text>
+				</g>
+			</svg>
+		<!-- <div class="section-block-header"><h1>Task <br> Manager</h1></div> -->
+				
+		<a class="scroll-link" href="#content">
+			<svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+				<g fill="none" fill-rule="evenodd">
+					<rect width="70" height="118" x="1.5" y="1.5" stroke="#000" stroke-width="3" rx="36"/>
+					<circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000"/>
+				</g>
+			</svg>
+		</a>
+			
+	</div>
+	</section>
+	<div class="line"></div>
+	<div id="content" class="content">			
+			<!-- <div class="section-block-header"><h1>TASK MANAGER</h1></div> -->
+			<!-- <div class="start-page" id="main"> -->
+				<section id="home">
+					<!-- <div class="section-block" id="selection-block1"> -->
+						<!-- <div class="row-block"> -->
+							<fieldset>
+								<legend class="greeting-line"><h2>Hey, do you want<br> to manage your time?</h2></legend>
+								<div class="column-block">
+								
+								<!-- <div class="greeting-line"><h2>Hey, do you want<br> to manage your time?</h2></div> -->
+									<div class="header-block-text">
+										<h3>Time Management Begins with Organization.</h3>
+										<p>Time management isn’t this elusive form of Black Magic that so few understand. 
+										In fact, anyone can efficiently manage their time as long as they get organized first. 
+										Without organization, it’s difficult to see just what needs to be accomplished in the day and how important each of those things are to your long-term goals.
+										</p>
+									</div>
+								</div>
+								<div class="column-block">
+									<ul class="border">
+										<li><h3>Step #1 – Set Clear Goals</h3></li>
+										<li><h3>Step #2 – Get Organized</h3></li>
+										<li><h3>Step #3 – Prioritizing Time</h3></li>
+									</ul>
+								</div>
+							</fieldset>
+						<!-- </div>	 -->
+					<!-- </div> -->
+				</section>
+	</div>
+	<div id="content" class="content">	
+				<section id="tasks">
+						
+					<div class="table-section-block" id="table-section-block1">
+							<% include ../partials/table %>
+					</div>
+				</section>
+	</div>
+	<div id="content" class="content">	
+				<section id="TaskInfo1" class="TaskInfo">
+						<% include ../partials/taskInfo %>
+					
+				</section>
+	</div>
+	<div id="content" class="content">	
+				<section id="authForm" class="authForm">
+					<% include ../partials/authForm %>
+				
+				</section>
+			<!-- </div>	 -->
+	</div>
+	</div>
+	<aside>
+		<div id="sidebar">
+			<div class="toggle-btn" onclick="toggleSidebar(this)">
+				<span class="bar1"></span>
+				<span class="bar2"></span>
+				<span class="bar3"></span>
+			</div>
+			<ul class="sidebar" id="sidebar1">
+				<li onclick="dropdownHome('toggle-btn')">Home</li>
+				<li onclick="dropdownTable('toggle-btn')">Tasks</li>
+				<li onclick="dropdownTaskInfo()">Create Task</li>
+				<li onclick="LogOut()">LogOut</li>
+			</ul>
+			<ul class="sidebar" id="sidebarForAuth">
+				<li onclick="dropdownHome('toggle-btn')">Home</li>
+				<li onclick="dropdownAuthForm()">LogIn</li>
+			</ul>
+		</div>
+
+	</aside>
+	
+</body>
+</html>
